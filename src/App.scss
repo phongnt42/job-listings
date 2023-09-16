@@ -1,0 +1,23 @@
+.main-page {
+  --background-color: #020617;
+  --text-color: #ffffff;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  .container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .header-container {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
