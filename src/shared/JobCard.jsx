@@ -1,6 +1,14 @@
 import React from "react";
-import { Box, Flex, Heading, Text, Button } from "@chakra-ui/react";
-import { ViewOffIcon } from "@chakra-ui/icons";
+import { Box, Flex, Heading, Text, Button, Icon } from "@chakra-ui/react";
+import {
+  AiOutlineHeart,
+  AiOutlineEyeInvisible,
+  AiOutlineCalendar,
+} from "react-icons/ai";
+import { FaRegMoneyBillAlt } from "react-icons/fa";
+import { RiGraduationCapLine } from "react-icons/ri";
+
+import BadgeCustom from "./BadgeCustom";
 
 const JobCard = () => {
   return (
@@ -23,7 +31,7 @@ const JobCard = () => {
               backgroundColor: "#1E313B",
             }}
           >
-            <ViewOffIcon color="white" />
+            <Icon as={AiOutlineEyeInvisible} color="white" />
           </Button>
           <Button
             bgColor="#020617"
@@ -34,20 +42,18 @@ const JobCard = () => {
               backgroundColor: "#1E313B",
             }}
           >
-            <ViewOffIcon color="white" />
+            <Icon as={AiOutlineHeart} color="white" />
           </Button>
         </Flex>
       </Flex>
-      <Flex>
-        <Flex
-          width="80px"
-          bgColor="#1e293b"
-          justifyItems="space-between"
-          paddingX="10px"
-          borderRadius="10px"
-        >
-         <Text fontSize='sm'>$200,000</Text>
-        </Flex>
+      <Flex gap="5px">
+        <BadgeCustom value="$200,000" icon={FaRegMoneyBillAlt} />
+        <BadgeCustom value="Full Time" icon={AiOutlineCalendar} />
+        <BadgeCustom value="Senior" icon={RiGraduationCapLine} />
+      </Flex>
+      <Text mt="20px">We are looking for a dedicated senior web developer</Text>
+      <Flex justifyContent="end">
+        <Button mt="20px">View more</Button>
       </Flex>
     </Box>
   );
