@@ -7,9 +7,9 @@ const Header = () => {
       <div className="header-content container">
         Nguyen The Phong
         <Flex>
-          <ButtonNav title="Task Board" />
-          <ButtonNav title="Job Listings" />
-          <ButtonNav title="Login" />
+          <ButtonNav>Task Board</ButtonNav>
+          <ButtonNav>Job Listings</ButtonNav>
+          <ButtonNav>Login</ButtonNav>
         </Flex>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 
-const ButtonNav = ({title}) => {
+const ButtonNav = ({children, style}) => {
   return (
     <Box
       paddingX="16px"
@@ -9,12 +9,13 @@ const ButtonNav = ({title}) => {
       fontWeight={500}
       cursor="pointer"
       fontSize="14px"
+      borderRadius="8px"
       _hover={{
         backgroundColor: "#1E313B",
-        borderRadius: "10px",
       }}
+      {...style}
     >
-      {title}
+      {children}
     </Box>
   );
 };

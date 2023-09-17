@@ -1,28 +1,24 @@
 import React from "react";
-import { Heading, Box, Flex } from "@chakra-ui/react";
+import { Heading, Flex, Box } from "@chakra-ui/react";
+import ButtonNav from "../shared/ButtonNav";
+import JobSearch from "./components/JobSearch";
+import JobList from "./components/JobList";
 
 const JobListings = () => {
   return (
     <div>
-      <Flex justifyContent="space-between" alignItems="center">
-        <Heading as="h1" size="2xl" noOfLines={1}>
+      <Flex justifyContent="space-between" alignItems="center" mb="32px">
+        <Heading as="h1" size="2xl">
           Job Listings
         </Heading>
-        <Box
-          paddingX="16px"
-          paddingY="8px"
-          fontWeight={500}
-          cursor="pointer"
-          border="1px solid #1E293B"
-          borderRadius= "10px"
-          fontSize="14px"
-          _hover={{
-            backgroundColor: "#1E313B",
-          }}
-        >
+        <ButtonNav style={{ border: "1px solid #1E293B" }}>
           Create Listing
-        </Box>
+        </ButtonNav>
       </Flex>
+      <JobSearch />
+      <Box mt="42px">
+        <JobList />
+      </Box>
     </div>
   );
 };
